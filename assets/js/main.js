@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Inject Noise Overlay for texture
+  const noise = document.createElement('div');
+  noise.className = 'noise-overlay';
+  document.body.appendChild(noise);
+
   // Mobile Navigation Toggle
   const hamburger = document.querySelector('.hamburger');
   const mobileNav = document.querySelector('.mobile-nav-overlay');

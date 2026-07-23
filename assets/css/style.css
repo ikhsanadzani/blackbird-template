@@ -35,6 +35,11 @@
 
 body {
   background-color: var(--bg-oled);
+  background-image: 
+    linear-gradient(var(--hairline-subtle) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hairline-subtle) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
   color: var(--text-main);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -42,6 +47,14 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.03%22/%3E%3C/svg%3E');
 }
 
 /* Background Mesh Glow */
