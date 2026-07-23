@@ -1,0 +1,112 @@
+/* ==========================================================================
+   SPECS PAGE STYLES (Matrix & Tables)
+   ========================================================================== */
+
+.text-center {
+  text-align: center;
+}
+.pt-0 {
+  padding-top: 0;
+}
+
+.matrix-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.matrix-core {
+  padding: 3rem;
+}
+
+.matrix-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.arch-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--hairline);
+  background: var(--bg-oled);
+  color: var(--text-muted);
+}
+
+.badge.arch-x86_64 {
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.specs-table th,
+.specs-table td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--hairline-subtle);
+}
+
+.specs-table th {
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.specs-table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.specs-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.specs-table td:first-child {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.specs-table td {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Mobile Fallback */
+@media (max-width: 768px) {
+  .matrix-core {
+    padding: 1.5rem;
+  }
+  .matrix-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .specs-table th,
+  .specs-table td {
+    padding: 1rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}

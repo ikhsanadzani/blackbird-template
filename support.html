@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komunitas & Bantuan | Yuros Blackbird Project</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/support.css">
+</head>
+<body>
+  
+  <nav class="nav-island">
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="features.html">Fitur</a></li>
+      <li><a href="specs.html">Spesifikasi</a></li>
+      <li><a href="docs.html">Wiki</a></li>
+      <li><a href="support.html" class="active">Bantuan</a></li>
+    </ul>
+    <a href="download.html" class="btn-nested">
+      <span class="btn-text">Download ISO</span>
+      <div class="btn-icon-wrapper">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </div>
+    </a>
+  </nav>
+
+  <div class="mobile-nav-overlay">
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="features.html">Fitur & Antarmuka</a></li>
+      <li><a href="specs.html">Spesifikasi Teknis</a></li>
+      <li><a href="docs.html">Dokumentasi</a></li>
+      <li><a href="support.html">Komunitas & Bantuan</a></li>
+    </ul>
+  </div>
+
+  <header class="container section-spacing text-center pb-0">
+    <div class="fade-up">
+      <span class="eyebrow">Community & Support</span>
+      <h1 class="text-massive">Komunitas & Bantuan.</h1>
+      <p class="hero-tagline" style="margin: 2rem auto 0 auto;">Connect with fellow researchers and resolve system issues.</p>
+    </div>
+  </header>
+
+  <section class="container section-spacing support-grid fade-up delay-100">
+    
+    <!-- Left Column: Channels & Form -->
+    <div class="support-col-left">
+      
+      <!-- Channel Directory -->
+      <div class="doppel-shell mb-8">
+        <div class="doppel-core channel-core">
+          <h3 class="text-h3 mb-4">Official Channels</h3>
+          <div class="channel-list">
+            <a href="#" class="channel-link">
+              <span class="channel-icon">🐙</span>
+              <div>
+                <strong>GitHub Issues</strong>
+                <p>Report bugs & request features.</p>
+              </div>
+            </a>
+            <a href="#" class="channel-link">
+              <span class="channel-icon">✈️</span>
+              <div>
+                <strong>Internal Telegram</strong>
+                <p>Real-time chat for UIN Students.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Native Ticketing Form -->
+      <div class="doppel-shell">
+        <div class="doppel-core">
+          <h3 class="text-h3 mb-4">Submit Error Trace</h3>
+          <form action="#" class="ticket-form" onsubmit="event.preventDefault();">
+            <div class="form-group">
+              <label for="studentId">NIM / Student ID</label>
+              <input type="text" id="studentId" class="native-input" placeholder="e.g. 1120025..." required>
+            </div>
+            <div class="form-group">
+              <label for="bugTitle">Issue Summary</label>
+              <input type="text" id="bugTitle" class="native-input" placeholder="Short description" required>
+            </div>
+            <div class="form-group">
+              <label for="bugLogs">System Logs / Trace</label>
+              <textarea id="bugLogs" class="native-textarea" rows="4" placeholder="Paste your terminal logs here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-nested mt-4">
+              <span class="btn-text">Submit Ticket</span>
+              <div class="btn-icon-wrapper">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column: FAQs -->
+    <div class="support-col-right">
+      <div class="doppel-shell h-full">
+        <div class="doppel-core">
+          <h3 class="text-h3 mb-4">Frequently Asked Questions</h3>
+          
+          <div class="accordion">
+            
+            <div class="accordion-item">
+              <button class="accordion-header">
+                System freezes during text-based setup, what to do?
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>If the installer hangs, it may be a kernel panic related to legacy GPU drivers. Reboot your system and press <code>e</code> at the GRUB menu. Append <code>nomodeset</code> to the boot parameters and press F10 to boot.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Where are the CLI assignment logs saved?
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>All automated terminal recordings are permanently stored in <code>/var/log/yuros_student_cli.log</code>. Standard users have read-only access to this file to prevent tampering.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                Can I install a graphical desktop environment?
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>Yes. Although Blackbird is optimized for lightweight text operations, you can easily install the customized XFCE desktop by running <code>sudo apt install yuros-desktop</code> from the terminal.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="global-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Yuros Chapter UIN Syarif Hidayatullah Jakarta. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/accordion.js"></script>
+</body>
+</html>

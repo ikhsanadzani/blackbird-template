@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumentasi | Yuros Blackbird Project</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
+</head>
+<body>
+  
+  <nav class="nav-island">
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="features.html">Fitur</a></li>
+      <li><a href="specs.html">Spesifikasi</a></li>
+      <li><a href="docs.html" class="active">Wiki</a></li>
+      <li><a href="support.html">Bantuan</a></li>
+    </ul>
+    <a href="download.html" class="btn-nested">
+      <span class="btn-text">Download ISO</span>
+      <div class="btn-icon-wrapper">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </div>
+    </a>
+  </nav>
+
+  <div class="mobile-nav-overlay">
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="features.html">Fitur & Antarmuka</a></li>
+      <li><a href="specs.html">Spesifikasi Teknis</a></li>
+      <li><a href="docs.html">Dokumentasi</a></li>
+      <li><a href="support.html">Komunitas & Bantuan</a></li>
+    </ul>
+  </div>
+
+  <header class="container section-spacing text-center pb-0">
+    <div class="fade-up">
+      <span class="eyebrow">Knowledge Base</span>
+      <h1 class="text-massive">Wiki Hub.</h1>
+      <p class="hero-tagline" style="margin: 2rem auto 0 auto;">Comprehensive documentation for students and contributors.</p>
+    </div>
+  </header>
+
+  <section class="container section-spacing wiki-layout fade-up delay-100">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="wiki-sidebar">
+      <div class="sidebar-sticky">
+        <h4 class="sidebar-title">Contents</h4>
+        <ul class="sidebar-nav">
+          <li><a href="#install" class="sidebar-link active">1. Installation Roadmap</a></li>
+          <li><a href="#student" class="sidebar-link">2. Student Guide</a></li>
+          <li><a href="#contributor" class="sidebar-link">3. Contributor Hub</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="wiki-content doppel-shell">
+      <div class="doppel-core content-core">
+        
+        <!-- Section: Installation Roadmap -->
+        <article id="install" class="wiki-section">
+          <span class="eyebrow">Setup</span>
+          <h2>Installation Roadmap</h2>
+          <p>Follow these steps to deploy Yuros Blackbird Project on your machine.</p>
+          
+          <h3>1. Flashing the ISO</h3>
+          <p>Download the latest release and use a tool like <strong>Rufus</strong> or <strong>balenaEtcher</strong>.</p>
+          <ul class="wiki-list">
+            <li>Select the downloaded <code>.iso</code> file.</li>
+            <li>Choose your USB Drive (Min 8GB).</li>
+            <li>Click Flash and wait for completion.</li>
+          </ul>
+
+          <h3>2. Entering BIOS/UEFI</h3>
+          <p>Reboot your PC. Continuously press <code>F2</code>, <code>F12</code>, or <code>Del</code> to enter BIOS settings. Change the Boot Priority to boot from the USB Drive first.</p>
+
+          <h3>3. Text-Based Setup</h3>
+          <p>Yuros Blackbird uses a highly reliable text-based installer. Use your arrow keys to navigate the menu and follow the prompts to format your drive and install the base system.</p>
+        </article>
+
+        <hr class="wiki-divider">
+
+        <!-- Section: Student Guide -->
+        <article id="student" class="wiki-section">
+          <span class="eyebrow">Academic Workflow</span>
+          <h2>Student Guide</h2>
+          <p>How to utilize the automated terminal recording for your assignments.</p>
+
+          <h3>Fetching CLI Logs</h3>
+          <p>Every command you type is captured by the background daemon. To fetch your session log:</p>
+          <div class="code-block">
+            <code>cat /var/log/yuros_student_cli.log > ~/assignment_logs.txt</code>
+          </div>
+
+          <h3>Packaging for Submission</h3>
+          <p>Zip your logs alongside your metadata analysis output to submit to the lecturer portal.</p>
+          <div class="code-block">
+            <code>tar -czvf assignment_submission.tar.gz ~/assignment_logs.txt ~/mods_data.xml</code>
+          </div>
+        </article>
+
+        <hr class="wiki-divider">
+
+        <!-- Section: Contributor Hub -->
+        <article id="contributor" class="wiki-section">
+          <span class="eyebrow">Development</span>
+          <h2>Contributor Hub</h2>
+          <p>Join the development of Yuros Blackbird Project.</p>
+
+          <h3>System Logs Compilation</h3>
+          <p>When reporting bugs, always include the core trace logs. Retrieve them using our built-in debug script:</p>
+          <div class="code-block">
+            <code>sudo yuros-debug --export-tar</code>
+          </div>
+
+          <h3>Source File Forks</h3>
+          <p>Fork our repository on GitHub. We enforce a strict branching model. Submit Pull Requests to the <code>dev</code> branch, never directly to <code>main</code>.</p>
+        </article>
+
+      </div>
+    </main>
+
+  </section>
+
+  <footer class="global-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Yuros Chapter UIN Syarif Hidayatullah Jakarta. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitur & Antarmuka | Yuros Blackbird Project</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/features.css">
+</head>
+<body>
+  
+  <nav class="nav-island">
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="features.html" class="active">Fitur</a></li>
+      <li><a href="specs.html">Spesifikasi</a></li>
+      <li><a href="docs.html">Wiki</a></li>
+      <li><a href="support.html">Bantuan</a></li>
+    </ul>
+    <a href="download.html" class="btn-nested">
+      <span class="btn-text">Download ISO</span>
+      <div class="btn-icon-wrapper">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      </div>
+    </a>
+  </nav>
+
+  <div class="mobile-nav-overlay">
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="features.html">Fitur & Antarmuka</a></li>
+      <li><a href="specs.html">Spesifikasi Teknis</a></li>
+      <li><a href="docs.html">Dokumentasi</a></li>
+      <li><a href="support.html">Komunitas & Bantuan</a></li>
+    </ul>
+  </div>
+
+  <header class="container section-spacing">
+    <div class="text-center fade-up">
+      <span class="eyebrow">System Capabilities</span>
+      <h1 class="text-massive">Fitur & Antarmuka.</h1>
+      <p class="hero-tagline" style="margin: 2rem auto;">Precision-engineered tools for modern archive management.</p>
+    </div>
+  </header>
+
+  <!-- Active Preview Gallery -->
+  <section class="container section-spacing pt-0">
+    <div class="gallery-wrapper fade-up delay-100">
+      
+      <div class="gallery-controls">
+        <button class="gallery-tab active" data-target="desktop">Desktop View</button>
+        <button class="gallery-tab" data-target="startmenu">Start Menu</button>
+        <button class="gallery-tab" data-target="terminal">CLI Terminal</button>
+      </div>
+
+      <div class="doppel-shell gallery-display">
+        <div class="doppel-core">
+          
+          <div class="gallery-panel active" id="desktop">
+            <div class="placeholder-img">
+              <span>[ Desktop Environment Placeholder ]</span>
+            </div>
+            <div class="panel-desc">
+              <h3 class="text-h3">Clean Workspace</h3>
+              <p>Distraction-free environment tailored for high-focus academic research and metadata cataloging.</p>
+            </div>
+          </div>
+
+          <div class="gallery-panel" id="startmenu">
+            <div class="placeholder-img">
+              <span>[ Start Menu Placeholder ]</span>
+            </div>
+            <div class="panel-desc">
+              <h3 class="text-h3">Categorized Navigation</h3>
+              <p>Applications logically grouped by library sciences disciplines (Cataloging, Preservation, Analysis).</p>
+            </div>
+          </div>
+
+          <div class="gallery-panel" id="terminal">
+            <div class="placeholder-img terminal-style">
+              <span>user@blackbird:~$ tail -f /var/log/syslog</span>
+            </div>
+            <div class="panel-desc">
+              <h3 class="text-h3">Automated Evaluator CLI</h3>
+              <p>Background daemon silently capturing standard I/O for grading evaluation.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built-in App Showcases -->
+  <section class="container section-spacing">
+    <h2 class="text-h2 fade-up">Built-in App Ecosystem</h2>
+    <div class="app-grid fade-up delay-100">
+      
+      <div class="doppel-shell app-card">
+        <div class="doppel-core">
+          <div class="app-icon">📚</div>
+          <h4>Archiving Tools</h4>
+          <p>Pre-installed preservation suites ready to handle complex digital collections and repositories.</p>
+        </div>
+      </div>
+
+      <div class="doppel-shell app-card">
+        <div class="doppel-core">
+          <div class="app-icon">🏷️</div>
+          <h4>Metadata Processors</h4>
+          <p>Native parsers and generators for Dublin Core, MARC21, and MODS frameworks.</p>
+        </div>
+      </div>
+
+      <div class="doppel-shell app-card">
+        <div class="doppel-core">
+          <div class="app-icon">💻</div>
+          <h4>Terminal Utilities</h4>
+          <p>Advanced grep, awk, and log-parsing scripts specifically compiled for student workflows.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tweak Configurations -->
+  <section class="container section-spacing">
+    <div class="doppel-shell tweak-section fade-up">
+      <div class="doppel-core">
+        <div class="tweak-content">
+          <span class="eyebrow">Customization</span>
+          <h2 class="text-h2">Tweak Configurations</h2>
+          <p>Deep-level shell modification via Yuros Control Center. Adjust kernel parameters, visual aesthetics, and recording triggers without manual config editing.</p>
+          <a href="docs.html" class="btn-secondary mt-4">Read Documentation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="global-footer">
+    <div class="footer-content">
+      <p>&copy; 2026 Yuros Chapter UIN Syarif Hidayatullah Jakarta. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

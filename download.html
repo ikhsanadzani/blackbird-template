@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackbird OS - Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                </svg>
+                <span>Blackbird Linux</span>
+            </div>
+            <div class="server-info">
+                <span class="host">Official Mirror</span>
+                <span class="status-indicator"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container main-content">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-image-container">
+                <!-- Ganti source gambar (src) di bawah ini dengan link gambar hero OS Anda -->
+                <img src="hero-placeholder.jpg" alt="Blackbird OS Preview" class="hero-img">
+                <div class="hero-content">
+                    <h1>Blackbird OS</h1>
+                    <p>Bring the best desktop experience. Select a spin version and download below.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="release-tabs">
+            <button class="tab-btn active" id="btn-amanda">Amanda</button>
+            <button class="tab-btn" id="btn-blackbird">Raven</button>
+        </div>
+
+        <div class="file-browser">
+            <div class="browser-header">
+                <div class="col-name">File Name</div>
+                <div class="col-date">Date Modified</div>
+                <div class="col-size">Size</div>
+                <div class="col-action"></div>
+            </div>
+            <div class="file-list" id="list-amanda">
+                <!-- ISO Files (Highlight them) -->
+                <div class="file-row iso-file">
+                    <div class="col-name">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <div class="file-details">
+                            <span class="filename">blackbird-amandax86_64.iso</span>
+                            <span class="file-badge">Recommended</span>
+                        </div>
+                    </div>
+                    <div class="col-date">01-May-2026 13:06</div>
+                    <div class="col-size">1.0 GB</div>
+                    <div class="col-action">
+                        <a href="/source/blackbird-amanda.iso" class="btn-download" download>Download</a>
+                        <a href="https://onboardcloud.dl.sourceforge.net/project/blackbird/release-beta/blackbird-amanda.iso?viasf=1&fid=47947c083191922f" target="_blank" class="btn-download">Mirror</a>
+                        
+                    </div>
+                </div>
+                <div class="describe">
+
+                    <h2 class="col-name">Design Purposes</h2>
+
+                    <p>
+                    This operating system is spining mode of Yuros Blackbird Project. Specially designed by Member of Yuros Chapter UIN Syarif Hidayatullah Jakarta. The goal of this project is academic activities in Technology Courses at <strong>UIN Syarif Hidayatullah Jakarta</strong>, Department of Library and Information Science.
+                    </p>
+
+                    <p>
+                    The system provides a lightweight and customizable environment focused on digital preservation, archive management, metadata processing, and digital library services. It includes various open-source tools and command-line utilities commonly used in library and archival workflows.
+                    </p>
+
+                    <p>
+                    One of the main features of this operating system is <strong>Terminal Recording during the installation process using CLI (Command Line Interface)</strong>. This feature automatically records installation activities and terminal commands for learning, documentation, troubleshooting, and academic evaluation purposes.
+                    </p>
+
+                    <h3 class="col-name">Main Features</h3>
+
+                    <ul>
+                        <li>CLI-based installation process</li>
+                        <li>Automatic terminal session recording</li>
+                        <li>Lightweight and optimized Linux environment</li>
+                        <li>Educational-focused system configuration</li>
+                        <li>Open-source and customizable platform</li>
+                    </ul>
+
+                    <h3 class="col-name">Educational Purpose</h3>
+
+                    <p>
+                    This operating system is developed specifically for teaching and learning activities in Digital Library and Archive courses. It is intended to help students understand:
+                    </p>
+
+                    <ul>
+                        <li>Linux-based system administration</li>
+                        <li>Develop Digital preservation workflows</li>
+                        <li>Develop Digital library model</li>
+                        <li>Develop Archive management systems</li>
+                        <li>Documentation and system logging</li>
+                    </ul>
+
+                    <h3 class="col-name">Warning and Disclaimer</h3>
+
+                    <p>
+                    This operating system is intended primarily for academic and educational purposes within the Department of Library and Information Science UIN Syarif Hidayatullah Jakarta.
+                    </p>
+
+                    <p>
+                    Any use of this operating system outside academic activities, including production, commercial, or unauthorized environments, is entirely the responsibility of the user. The developer and institution are not responsible for any damage, data loss, security issues, or misuse resulting from improper usage outside the intended educational context.
+                    </p>
+                </div>
+            </div>
+
+            <div class="file-list" id="list-blackbird" style="display: none;">
+                <!-- ISO Files for Blackbird -->
+                <div class="file-row iso-file">
+                    <div class="col-name">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <div class="file-details">
+                            <span class="filename">blackbird-ravenx86_64.iso</span>
+                        </div>
+                    </div>
+                    <div class="col-date">15-Apr-2026 09:20</div>
+                    <div class="col-size">1.2 GB</div>
+                    <div class="col-action">
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+                <div class="describe">
+
+                    <h2 class="col-name">Design Purposes</h2>
+
+                    <p>
+                    This operating system is a core of Blackbird Project and Used for internal member only.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contributors Section -->
+        <section class="contributors-section">
+            <h2 class="section-title">Amanda Core Maintainer</h2>
+            <div class="contributors-grid">
+                <div class="contributor-card">
+                    <div class="avatar">
+                        <img src="/assets/achmad-baihaqi.jpeg" alt="Achmad Baihaqi Avatar" class="avatar-img">
+                    </div>
+                    <div class="contributor-info">
+                        <h3>Achmad Baihaqi</h3>
+                        <p>Maintainer</p>
+                    </div>
+                </div>
+                <div class="contributor-card">
+                    <div class="avatar">
+                        <img src="/assets/ikhsan-adzani.jpeg" alt="Ikhsan Adzani Avatar" class="avatar-img">
+                    </div>
+                    <div class="contributor-info">
+                        <h3>Ikhsan Adzani</h3>
+                        <p>Maintainer</p>
+                    </div>
+                </div>
+                <div class="contributor-card">
+                    <div class="avatar">
+                        <img src="/assets/muhammad-ridho.jpg" alt="Muhammad Ridho Avatar" class="avatar-img">
+                    </div>
+                    <div class="contributor-info">
+                        <h3>Muhammad Ridho N.I</h3>
+                        <p>Maintainer</p>
+                    </div>
+                </div>
+                <div class="contributor-card">
+                    <div class="avatar">
+                        <img src="/assets/luqman-hakim.jpg" alt="Luqman Hakim Avatar" class="avatar-img">
+                    </div>
+                    <div class="contributor-info">
+                        <h3>Luqman Hakim</h3>
+                        <p>Maintainer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="server-info>
+            <p class=" academic-note">Developed specifically for the Digital Library and Archives course, Library and
+            Information Science, at UIN Syarif Hidayatullah Jakarta.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
