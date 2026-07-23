@@ -90,7 +90,7 @@
   grid-row: span 2;
 }
 .bento-large .doppel-core {
-  background: linear-gradient(135deg, var(--bg-card-inner) 0%, rgba(43, 58, 85, 0.2) 100%);
+  background: linear-gradient(135deg, var(--bg-card-inner) 0%, rgba(99, 102, 241, 0.2) 100%);
   justify-content: center;
 }
 .bento-large h3 {

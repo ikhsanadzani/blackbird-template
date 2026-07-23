@@ -17,7 +17,7 @@
 
 /* Channels */
 .channel-core {
-  background: linear-gradient(to bottom, var(--bg-card-inner), rgba(43, 58, 85, 0.1));
+  background: linear-gradient(to bottom, var(--bg-card-inner), rgba(99, 102, 241, 0.1));
 }
 
 .channel-list {

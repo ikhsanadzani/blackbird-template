@@ -154,7 +154,7 @@
 
 /* Tweak Section */
 .tweak-section .doppel-core {
-  background: linear-gradient(to right, var(--bg-card-inner), rgba(43, 58, 85, 0.15));
+  background: linear-gradient(to right, var(--bg-card-inner), rgba(99, 102, 241, 0.15));
 }
 .tweak-content {
   max-width: 600px;

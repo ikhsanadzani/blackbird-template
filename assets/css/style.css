@@ -6,18 +6,18 @@
 
 :root {
   /* Colors */
-  --bg-oled: #050505;
-  --bg-card-outer: rgba(255, 255, 255, 0.03);
-  --bg-card-inner: #0a0a0c;
-  --accent-slate: #2B3A55; /* Deep Slate Blue */
-  --accent-charcoal: #1E2022;
-  --accent-glow: rgba(43, 58, 85, 0.4);
+  --bg-oled: #09090b;
+  --bg-card-outer: #27272a;
+  --bg-card-inner: #18181b;
+  --accent-slate: #6366f1;
+  --accent-charcoal: #4f46e5;
+  --accent-glow: rgba(99, 102, 241, 0.15);
   
-  --text-main: #FDFBF7;
-  --text-muted: rgba(253, 251, 247, 0.6);
+  --text-main: #f8fafc;
+  --text-muted: #a1a1aa;
   
-  --hairline: rgba(255, 255, 255, 0.1);
-  --hairline-subtle: rgba(255, 255, 255, 0.05);
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-subtle: rgba(255, 255, 255, 0.04);
 
   /* Typography */
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -226,6 +226,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links a:hover,
 .nav-links a.active {
+  color: var(--text-main);
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--hairline);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
   color: var(--text-main);
 }
 

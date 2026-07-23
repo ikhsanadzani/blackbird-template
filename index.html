@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,14 @@
       <li><a href="specs.html">Spesifikasi</a></li>
       <li><a href="docs.html">Wiki</a></li>
       <li><a href="support.html">Bantuan</a></li>
+      <li class="lang-switcher">
+        <button class="lang-btn active" data-set-lang="id">ID</button>
+        <span style="color: var(--text-muted);">|</span>
+        <button class="lang-btn" data-set-lang="en">EN</button>
+      </li>
     </ul>
     <a href="download.html" class="btn-nested">
-      <span class="btn-text">Download ISO</span>
+      <span class="btn-text" data-i18n="nav-download">Unduh OS (ISO)</span>
       <div class="btn-icon-wrapper">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -41,64 +46,68 @@
       <li><a href="specs.html">Spesifikasi Teknis</a></li>
       <li><a href="docs.html">Dokumentasi</a></li>
       <li><a href="support.html">Komunitas & Bantuan</a></li>
+      <li class="lang-switcher-mobile mt-4" style="display:flex; gap: 1rem; align-items:center;">
+        <button class="lang-btn active" data-set-lang="id">ID (Bahasa Indonesia)</button>
+        <button class="lang-btn" data-set-lang="en">EN (English)</button>
+      </li>
     </ul>
   </div>
 
   <!-- Hero Section -->
   <header class="hero section-spacing container">
     <div class="hero-content fade-up">
-      <span class="eyebrow">Library & Archive Edition</span>
-      <h1 class="text-massive">Digital Preservation.<br>Engineered for Academia.</h1>
-      <p class="hero-tagline">
-        Yuros Blackbird Project is a custom Linux environment built for the Department of Library and Information Science at UIN Syarif Hidayatullah Jakarta. Featuring automated terminal recording and lightweight metadata processing workflows.
+      <span class="eyebrow" data-i18n="hero-eyebrow">Library & Archive Edition</span>
+      <h1 class="text-massive" data-i18n="hero-title">Kedaulatan Arsip Dimulai dari Level Sistem Operasi.</h1>
+      <p class="hero-tagline" data-i18n="hero-subtitle">
+        Bukan sekadar aplikasi perangkat lunak. Ini adalah infrastruktur OS mandiri dengan arsitektur file system tahan banting, dirancang khusus untuk integritas data jangka panjang dan keamanan tingkat enterprise.
       </p>
       
       <!-- Notification Bar -->
       <div class="notification-bar doppel-shell fade-up delay-100">
         <div class="doppel-core notification-core">
           <span class="pulse-dot"></span>
-          <p><strong>v2.4.0 Released:</strong> Advanced CLI logging enabled by default for Academic Evaluation.</p>
+          <p><strong data-i18n="hero-alert-bold">v2.4.0 Released:</strong> <span data-i18n="hero-alert-text">Advanced CLI logging enabled by default for Academic Evaluation.</span></p>
         </div>
       </div>
 
       <div class="hero-actions fade-up delay-200">
         <a href="download.html" class="btn-nested">
-          <span class="btn-text">Download Now</span>
+          <span class="btn-text" data-i18n="hero-btn-primary">Unduh OS (ISO)</span>
           <div class="btn-icon-wrapper">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </a>
-        <a href="features.html" class="btn-secondary">Explore Features</a>
+        <a href="docs.html" class="btn-secondary" data-i18n="hero-btn-secondary">Baca Dokumentasi Teknis</a>
       </div>
     </div>
   </header>
 
   <!-- Core Features Bento Grid -->
   <section class="container section-spacing">
-    <h2 class="text-h2 fade-up">Core System Identity</h2>
+    <h2 class="text-h2 fade-up" data-i18n="features-heading">Core System Identity</h2>
     <div class="bento-grid fade-up delay-100">
       
-      <!-- Card 1: Automatic Lab Recording -->
+      <!-- Card 1 -->
       <div class="doppel-shell bento-large">
         <div class="doppel-core">
-          <h3 class="text-h3">Automatic Terminal Recording</h3>
-          <p>The killer feature. Automatically logs all CLI activities and commands during installation and operation. Export raw transcripts instantly for learning, troubleshooting, and lecturer evaluations.</p>
+          <h3 class="text-h3" data-i18n="pilar-1-title">Arsitektur Penyimpanan & Keamanan Berlapis</h3>
+          <p data-i18n="pilar-1-desc">Menggunakan stabilitas kernel khusus dan enkripsi tingkat tinggi (hardware-backed encryption) untuk mencegah korupsi data dan intrusi akses secara mutlak.</p>
         </div>
       </div>
 
-      <!-- Card 2: Performance -->
+      <!-- Card 2 -->
       <div class="doppel-shell bento-small">
         <div class="doppel-core">
-          <h3 class="text-h3">Lightweight Environment</h3>
-          <p>Optimized for legacy university lab computers. Runs efficiently without compromising on modern archiving capabilities.</p>
+          <h3 class="text-h3" data-i18n="pilar-2-title">Performa Indexing Bawaan Sistem</h3>
+          <p data-i18n="pilar-2-desc">Pemrosesan metadata dan pencarian arsip dieksekusi secara langsung (bare-metal) di level sistem operasi untuk menghasilkan throughput kecepatan maksimal.</p>
         </div>
       </div>
 
-      <!-- Card 3: Preservation -->
+      <!-- Card 3 -->
       <div class="doppel-shell bento-wide">
         <div class="doppel-core">
-          <h3 class="text-h3">Preservation-Ready Ecosystem</h3>
-          <p>Pre-configured with industry-standard digital library models and metadata processing utilities out of the box.</p>
+          <h3 class="text-h3" data-i18n="pilar-3-title">Dukungan Bilingual Terintegrasi (Native)</h3>
+          <p data-i18n="pilar-3-desc">Dirancang dengan struktur antarmuka dan log sistem dwibahasa (Indonesia & Inggris) langsung dari inti OS, memudahkan adaptasi operasional global maupun lokal.</p>
         </div>
       </div>
 
@@ -108,7 +117,13 @@
   <!-- Global Footer -->
   <footer class="global-footer">
     <div class="footer-content">
-      <p>&copy; 2026 Yuros Chapter UIN Syarif Hidayatullah Jakarta. All rights reserved.</p>
+      <p data-i18n="footer-copyright">&copy; 2026 Hak Cipta Dilindungi. Sistem Operasi Kedaulatan Data.</p>
+      <p data-i18n="footer-compliance" style="margin-top: 0.5rem; font-size: 0.75rem;">Dibangun dengan kepatuhan terhadap standar keamanan arsip tingkat nasional dan protokol retensi data internasional.</p>
+      <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1rem; font-size: 0.75rem;">
+        <a href="#" style="color: var(--text-muted); text-decoration: none;" data-i18n="footer-link-1">Kebijakan Privasi</a> |
+        <a href="#" style="color: var(--text-muted); text-decoration: none;" data-i18n="footer-link-2">Syarat Penggunaan</a> |
+        <a href="#" style="color: var(--text-muted); text-decoration: none;" data-i18n="footer-link-3">Lisensi Kernel</a>
+      </div>
     </div>
   </footer>
 
