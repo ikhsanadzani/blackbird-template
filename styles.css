@@ -19,9 +19,19 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: var(--bg-main);
+    background-image: 
+      linear-gradient(var(--border-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
     color: var(--text-main);
-    line-height: 1.5;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+}
+
+.noise-overlay {
+    position: fixed; inset: 0; z-index: 50; pointer-events: none;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.03%22/%3E%3C/svg%3E');
 }
 
 .container {
@@ -124,22 +134,17 @@ body {
 .hero-image-container {
     position: relative;
     width: 100%;
-    height: 320px;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(9, 9, 11, 1) 100%);
+    height: 380px; /* pony: taller for breathing room */
+    background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.4) 0%, transparent 60%),
+                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+                var(--bg-card);
     display: flex;
-    align-items: flex-end;
-    padding: 3rem;
+    align-items: center; /* pony: center vertically */
+    padding: 3rem 4rem;
 }
 
 .hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.3; /* Opacity lowered to keep text highly readable */
-    z-index: 1;
+    display: none; /* pony: deleted broken asset */
 }
 
 .hero-content {
@@ -236,8 +241,10 @@ img {
 
 .describe p, .describe li {
     color: var(--text-muted);
-    font-size: .9rem;
-    margin-bottom: .75em;
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 75ch; /* pony: limit line length */
+    margin-bottom: 1.25em;
 }
 
 .describe p{

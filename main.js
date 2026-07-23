@@ -1,4 +1,9 @@
- const btnAmanda = document.getElementById('btn-amanda');
+// pony: inject noise overlay natively
+const noise = document.createElement('div');
+noise.className = 'noise-overlay';
+document.body.appendChild(noise);
+
+const btnAmanda = document.getElementById('btn-amanda');
         const btnBlackbird = document.getElementById('btn-blackbird');
         const listAmanda = document.getElementById('list-amanda');
         const listBlackbird = document.getElementById('list-blackbird');
